@@ -1,0 +1,135 @@
+-- CREATE TABLE Student(student_id varchar(50) PRIMARY KEY,
+-- 					 F_name text,
+-- 					 L_name text,
+-- 					 Other_names text,
+-- 					 Programme text,
+-- 					 Contact integer,
+-- 					 Email varchar(70),
+-- 					 Student_password varchar(100)
+-- 					);
+
+-- CREATE TABLE All_courses_tb(
+-- 	Programme text,
+-- 	course_code varchar(10),
+-- 	course_title text);
+
+-- CREATE TABLE Registered_courses(student_id varchar(50),
+-- 					 course_code varchar(10) PRIMARY KEY,
+-- 					 course_title text,
+-- 					 Programme text,
+-- 					 FOREIGN KEY(student_id) REFERENCES Student(student_id)
+-- 					);
+
+-- INSERT INTO Student(student_id, F_name, L_name, Other_names, Programme, Contact, Email, Student_password)
+-- 	VALUES
+-- 	('11011909 ', 'Marion', 'DOGODZI', 'Selasi Kwaku', 'Agriculture Engineering', 0243567890, 'mds@gmail.com', '12345'),
+-- 	('11014188', 'Betwell', 'BIRITWUM', 'Akos', 'Agriculture Engineering', 0554321123, 'bbetwell@gmail.com', '56789'),
+-- 	('11015773', 'Ebenezer', 'ARMAH', 'Brobbey', 'Agriculture Engineering', 0244356789, 'ebarmah@gmail.com', '49055'),
+-- 	('11022308', 'Umar', 'JEBRIL', 'Charles', 'Agriculture Engineering', 0554678921,'umjebril@gmail.com', '23345'),
+-- 	('11032113', 'Flora', 'OWUSU', 'Nyarko', 'Agriculture Engineering', 0554678921,'floraowusu@gmail.com', '12788'),
+-- 	('11053006', 'Herbert', 'NYARKO', 'Obeng', 'Agriculture Engineering', 0554556678,'herbertNyarko@gmail.com', '12788'),
+-- 	('11080393', 'Princess', 'AWUNYO', 'Diayana Dzigbodi', 'Agriculture Engineering', 0551122344,'ddzigbodi@gmail.com', '77689'),
+-- 	('11116634', 'Jeffrey', 'APOABADEK', 'Alimsiwen', 'Agriculture Engineering', 0267895670,'jeffreyali@gmail.com', '89087'),
+-- 	('11116240', 'Shakibu', 'ABDUL', 'Salam', 'Agriculture Engineering', 0502206678,'ShakibuSalam@gmail.com', '12334'),
+-- 	('11107207', 'Johnzac', 'ABABIO', 'John', 'Agriculture Engineering', 0204556678,'johnaba@gmail.com', '90089'),
+-- 	('11004294', 'Melvine', 'MIHINDOU IBINGA', 'Loyd', 'Biomedical Engineering', 0243567890, 'mmloyd@gmail.com', '87990'),
+-- 	('11012567', 'Morris', 'FRIMPONG', 'Boakye', 'Biomedical Engineering', 0578567890, 'mboakye@gmail.com', '87765'),
+-- 	('11013476', 'Leticia', 'ODOOM', 'Pomaa', 'Biomedical Engineering', 0243567890, 'lpomaa@gmail.com', '81340'),
+-- 	('11014194', 'Yeshrun', 'ODOI', 'Nii Odoi', 'Biomedical Engineering', 0548894758, 'niiodoi@gmail.com', '16676'),
+-- 	('11015141', 'Majeeda', 'AZONG', 'Awenpagrem', 'Biomedical Engineering', 0237755647, 'mazong@gmail.com', '22647'),
+-- 	('11015266', 'Sandra', 'ANI-MANTE', 'Yaa', 'Biomedical Engineering', 0569968765, 'sanyaa@gmail.com', '11264'),
+-- 	('11016405', 'Padmore', 'QUARSHIE', 'Mawuko', 'Biomedical Engineering', 0245575463, 'mmloyd@gmail.com', '88934'),
+-- 	('11023495', 'Ruth', 'SIANTEY', 'Peace', 'Biomedical Engineering', 0506689843, 'rupeace@gmail.com', '66378'),
+-- 	('11029626', 'Benedicta', 'AMOAH', 'Ofosuhemaa', 'Biomedical Engineering', 0248835490, 'benedicta@gmail.com', '99383'),
+-- 	('11040414', 'Michael', 'OYEH', ' Anim', 'Biomedical Engineering', 0506868855, 'animm@gmail.com', '33456'),
+-- 	('11004272', 'Ishaan', 'BHARDWAJ', 'Peace', 'Computer Engineering', 0548847654, 'ishaan@gmail.com', '25535'),
+-- 	('11010910', 'Samia', 'SOLEIMANI', 'Sia', 'Computer Engineering', 0247768598, 'samia@gmail.com', '88475'),
+-- 	('11012330', 'Ebenezer', 'ARTHUR', 'Kwame', 'Computer Engineering', 0548847654, 'eben@gmail.com', '78282'),
+-- 	('11012343', 'Kelvin', 'KUMI', 'Gyabaah', 'Computer Engineering', 0268879876, 'kgyabaah@gmail.com', '77354'),
+-- 	('11012837', 'Kofi', 'ANTUBAM', 'Junior', 'Computer Engineering', 0238844748, 'juniort@gmail.com', '77373'),
+-- 	('11013840', 'Kwabena', 'DARKO', 'Gyasi', 'Computer Engineering', 0279984732, 'gyasi@gmail.com', '73333'),
+-- 	('11014727', 'Praise', 'ANNAN', 'Chioma', 'Computer Engineering', 0268874564, 'chioma@gmail.com', '35533'),
+-- 	('11014977', 'Salihu', 'MOHAMMED', 'Hamisu', 'Computer Engineering', 0509987665, 'hamisu@gmail.com', '72282'),
+-- 	('11015506', 'Daniel', 'MANFORD', 'Agyin', 'Computer Engineering', 0546543783, 'agyin@gmail.com', '44422'),
+-- 	('11018690', 'Pius', 'OBLIE', 'Nii Quaye', 'Computer Engineering', 0576637333, 'pius@gmail.com', '11534'),
+-- 	('11012185', 'Chrisper', 'KONTOH', 'Twum', 'Food Process Engineering', 0206879874, 'twum@gmail.com', '11122'),
+-- 	('11013129', 'Esther', 'ADDO', 'Boadiwaa', 'Food Process Engineering', 0569908765, 'esther@gmail.com', '22333'),
+-- 	('11013532', 'Emmanuel', 'MENSAH', 'Yaw', 'Food Process Engineering', 0248847484, 'emmanuel@gmail.com', '44332'),
+-- 	('11014799', 'Gabriel', 'MANU', 'Kofi', 'Food Process Engineering', 0538838838, 'gabriel@gmail.com', '55222'),
+-- 	('11015228', 'Prince', 'ADEKYERE', 'Kofi', 'Food Process Engineering', 0548839233, 'pprince@gmail.com', '44221'),
+-- 	('11015914', 'Fidelia', 'NTIM', 'Gyakari', 'Food Process Engineering', 0558383833, 'gyakari@gmail.com', '77888'),
+-- 	('11036113', 'Bellissa', 'APPIAH', 'Bel', 'Food Process Engineering', 0558873822, 'lissa@gmail.com', '12334'),
+-- 	('11036527', 'Esther', 'NARTEY', 'Narkie', 'Food Process Engineering', 0598873525, 'narkie@gmail.com', '19874'),
+-- 	('11040630', 'Joshua', 'MENSAH', 'Okai', 'Food Process Engineering', 0578873833, 'jokai@gmail.com', '87645'),
+-- 	('11054613', 'Stacy', 'ADU-BOAKYE', 'Adobea', 'Food Process Engineering', 0597373663, 'adobea@gmail.com', '80997'),
+-- 	('11012078', 'Enoch', 'DANFUL', 'Kwaku', 'Material Science Engineering', 0568796789, 'kwaku@gmail.com', '66354'),
+-- 	('11012124', 'Benjamin', 'WUTSIKA', 'Mensah', 'Material Science Engineering', 0578765566, 'mensahben@gmail.com', '88955'),
+-- 	('11013104', 'Stephanie', 'SEGLAH', 'Adom', 'Material Science Engineering', 0558683339, 'seglah@gmail.com', '22445'),
+-- 	('11013296', 'Sowa', 'OKANG', 'Nii', 'Material Science Engineering', 0274474748, 'niisowa@gmail.com', '55332'),
+-- 	('11014221', 'David', 'AGBEKO', 'Edison', 'Material Science Engineering', 0549987654, 'davided@gmail.com', '23234'),
+-- 	('11059749', 'Yaw Opoku', 'AGYEI', 'Onyina', 'Material Science Engineering', 0502238444, 'onyina@gmail.com', '12132'),
+-- 	('11015126', 'Bridgetta', 'ANIN', 'Adwoa', 'Material Science Engineering', 0203838822, 'anin@gmail.com', '11232'),
+-- 	('11023236', 'Javan', 'ZIGAH', 'Christian', 'Material Science Engineering', 0592238822, 'javan@gmail.com', '33322'),
+-- 	('11026510', 'Mohammed', 'TOYIBU', 'Mutallah', 'Material Science Engineering', 0537728237, 'mutallah@gmail.com', '55666'),
+-- 	('11028369', 'Stephen', 'OKYERE', 'Darko', 'Material Science Engineering', 0505676789, 'okyere@gmail.com', '22345');
+
+
+-- -- list of all courses
+-- INSERT INTO All_courses_tb(Programme, course_code, course_title)
+-- 	VALUES('Computer Engineering', 'CPEN213', 'DISCRETE MATHEMATICS'),
+-- 	('Computer Engineering', 'CPEN211', 'DATABASE SYSTEM DESIGN'),
+-- 	('Computer Engineering', 'CPEN201', 'C++ PROGRAMMING'),
+-- 	('Computer Engineering', 'CPEN203', 'DIGITAL CIRCUIT'),
+-- 	('Computer Engineering', 'SENG201', 'LINEAR ALGEBRA'),
+-- 	('Computer Engineering', 'SENG207', 'PROGRAMMING FOR ENGINEERS'),
+-- 	('Computer Engineering', 'UGRC220', 'C++ PROGRAMMING'),
+-- 	('Biomedical Engineering', 'SENG205', 'THERMODYNAMICS I'),
+-- 	('Biomedical Engineering', 'BMEN205', 'ANATOMY AND PHYSIOLOGY'),
+-- 	('Biomedical Engineering', 'BMEN203', 'INTRO INTO STRUCTURE OF MATERIALS'),
+-- 	('Biomedical Engineering', 'SENG203', 'STRENGTH OF MATERIALS'),
+-- 	('Biomedical Engineering', 'SENG207', 'PROGRAMMING FOR ENGINEERS'),
+-- 	('Biomedical Engineering', 'SENG201', 'LINEAR ALGEBRA'),
+-- 	('Food Process Engineering', 'SENG205', 'THERMODYNAMICS I'),
+-- 	('Food Process Engineering', 'SENG203', 'STRENGTH OF MATERIALS'),
+-- 	('Food Process Engineering', 'FPEN205', 'BASIC FOOD PROCESSING ENGINEERING CALCULATION 1'),
+-- 	('Food Process Engineering', 'SENG207', 'PROGRAMMING FOR ENGINEERS'),
+-- 	('Food Process Engineering', 'SENG201', 'LINEAR ALGEBRA'),
+-- 	('Food Process Engineering', 'FPEN203', 'RHETORICAL AND SENSORY PROPERTIES OF FOOD'),
+-- 	('Agricultural Engineering', 'SENG205', 'THERMODYNAMICS I'),
+-- 	('Agricultural Engineering', 'SENG203', 'STRENGTH OF MATERIALS'),
+-- 	('Agricultural Engineering', 'AREN211', 'ANIMAL PRODUCTION'),
+-- 	('Agricultural Engineering', 'AREN213', 'ENGINEERING SURVEYING'),
+-- 	('Agricultural Engineering', 'SENG207', 'PROGRAMMING FOR ENGINEERS'),
+-- 	('Agricultural Engineering', 'SENG201', 'LINEAR ALGEBRA'),
+-- 	('Material Science Engineering', 'SENG203', 'STRENGTH OF MATERIALS'),
+-- 	('Material Science Engineering', 'MTEN203', 'MATERIALS IN OUR WORLD'),
+-- 	('Material Science Engineering', 'SENG205', 'THERMODYNAMICS I'),
+-- 	('Material Science Engineering', 'MTEN201', 'FUNDAMENTALS OF MATERIALS'),
+-- 	('Material Science Engineering', 'SENG207', 'PROGRAMMING FOR ENGINEERS'),
+-- 	('Material Science Engineering', 'SENG201', 'LINEAR ALGEBRA');
+
+
+-- -- register courses 
+-- CREATE OR REPLACE FUNCTION populate_courses(student_id varchar(50), course_code varchar(10), course_title text) RETURNS void 
+-- LANGUAGE 'plpgsql'
+-- AS
+-- $BODY$
+-- BEGIN
+-- 	INSERT INTO Registered_courses(student_id, course_code, course_title)
+-- 		--Course ID and title selected 
+-- 		VALUES(student_id, course_code, course_title);
+-- END;
+-- $BODY$
+
+
+-- -- show registered courses and login authentication
+-- CREATE OR REPLACE FUNCTION student_account(student_id varchar(50)) RETURNS void 
+-- LANGUAGE 'plpgsql'
+-- AS
+-- $BODY$
+-- BEGIN
+-- 	SELECT * FROM Student LEFT JOIN Courses ON Student.student_id = Registered_courses.student_id
+-- 	--id input from app user
+-- 	WHERE student_id = '';
+-- END;
+-- $BODY$
