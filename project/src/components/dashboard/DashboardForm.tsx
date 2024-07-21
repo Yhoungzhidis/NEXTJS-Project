@@ -82,6 +82,64 @@ const CourseDashboard = () => {
               </ul>
             </CardContent>
           </Card>
+          <Card className="bg-white shadow-sm mb-6">
+            <CardHeader>
+              <div className="flex justify-between items-center">
+                <CardTitle className="text-lg font-semibold">Course Task</CardTitle>
+                <a href="/assignments" className="text-sm text-blue-600">View All</a>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-4">
+                {['Assignment 2', 'LAB report', 'Interim Assessment'].map((task, index) => (
+                  <li key={index} className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center mr-3">
+                        {index === 0 && <Book size={16} className="text-indigo-600" />}
+                        {index === 1 && <Book size={16} className="text-indigo-600" />}
+                        {index === 2 && <Book size={16} className="text-indigo-600" />}
+                      </div>
+                      <span className="text-sm">{task}</span>
+                    </div>
+                
+                      <a href="/assignments">
+                        <ChevronRight size={16} className="text-gray-400 transform" />  
+                      </a>
+
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+          <Card className="bg-white shadow-sm mb-6">
+            <CardHeader>
+              <div className="flex justify-between items-center">
+                <CardTitle className="text-lg font-semibold">Course Task</CardTitle>
+                <a href="/assignments" className="text-sm text-blue-600">View All</a>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-4">
+                {['Assignment 2', 'LAB report', 'Interim Assessment'].map((task, index) => (
+                  <li key={index} className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-indigo-100 rounded-lg flex items-center justify-center mr-3">
+                        {index === 0 && <Book size={16} className="text-indigo-600" />}
+                        {index === 1 && <Book size={16} className="text-indigo-600" />}
+                        {index === 2 && <Book size={16} className="text-indigo-600" />}
+                      </div>
+                      <span className="text-sm">{task}</span>
+                    </div>
+                
+                      <a href="/assignments">
+                        <ChevronRight size={16} className="text-gray-400 transform" />  
+                      </a>
+
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
         </div>
 
      

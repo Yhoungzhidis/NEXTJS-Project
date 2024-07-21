@@ -74,7 +74,7 @@ const itemsBottom: Sidebaritem[] =[
 const Sidebar = () => {
   return (
    
-       <div >
+       <div className=" flex sticky top-16 z-[400]" >
       <div >
         {/* <Image className={styles.userImage} src="/noavatar.png" alt="" width={50} height={50}/> */}
         {/* <div className={styles.userDetail}>
@@ -82,7 +82,7 @@ const Sidebar = () => {
           <span className={styles.userTitle}>John@gmail.com</span>
           </div> */}
       </div>
-      <div className="flex flex-col space-y-10 w-full justify-between h-[calc(100vh-150px)] z-5">
+      <div className="flex flex-col space-y-10 w-full justify-between h-[calc(100vh-150px)] ">
         <div  className="flex flex-col space-y-2 bg-green ">
           {itemsTop.map((item) => (
             <SidebarItem key={item.path} item={item} />
