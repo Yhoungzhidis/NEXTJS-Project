@@ -43,7 +43,7 @@ const SignUpForm = () => {
       ...data,
       
     };
-    console.log(data);
+    // console.log(data);
 
     try {
       const response = await axios.post(

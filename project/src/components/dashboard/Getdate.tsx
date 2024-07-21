@@ -50,7 +50,7 @@ const GetDate = () => {
           <p className="text-sm text-gray-600 ">{formatDate(currentDateTime)}</p>
           <p className="text-sm text-gray-600">{formatTime(currentDateTime)}</p>
           <Bell className="text-gray-600" size={20} />
-          <div className="w-8 h-8 bg-gray-300 rounded-full"></div>
+          <a href="/profile"><img src="/noavatar.jpg" alt="Placeholder" className="w-8 h-8 rounded-full"/> </a>
         </div>
         
       </div>

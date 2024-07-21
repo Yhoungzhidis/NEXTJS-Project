@@ -11,7 +11,7 @@ const CourseDashboard = () => {
   const timeOfDay = getTime();
   return (
 
-    <div className="p-0 bg-gray-100">
+    <div className="p-0 bg-gray-100 ">
     
     <GetDate/>
     
@@ -30,7 +30,9 @@ const CourseDashboard = () => {
             </div>
             <Card className="bg-white shadow-sm mb-4">
               <CardContent className="p-4 flex items-center">
-                <div className="w-12 h-12 bg-gray-200 rounded-lg mr-4"></div>
+                {/* <div className="w-12 h-12 bg-gray-200 rounded-lg mr-4"></div> */}
+                <a href="/courses"><img src="/books.jpg" alt="Placeholder" className="w-12 h-12 bg-gray-200 rounded-lg mr-4"/> </a>
+
                 <div>
                   <p className="font-semibold">Course One</p>
                   <p className="text-xs text-gray-500">12 lessons • 6h 30min • Beginner</p>
@@ -41,7 +43,7 @@ const CourseDashboard = () => {
             
             <Card className="bg-white shadow-sm">
               <CardContent className="p-4 flex items-center">
-                <div className="w-12 h-12 bg-gray-200 rounded-lg mr-4"></div>
+              <a href="/courses"><img src="/books.jpg" alt="Placeholder" className="w-12 h-12 bg-gray-200 rounded-lg mr-4"/> </a>
                 <div>
                   <p className="font-semibold">Course Two</p>
                   <p className="text-xs text-gray-500">8 lessons • 4h 15min • Beginner</p>

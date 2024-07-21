@@ -29,7 +29,7 @@ const SignInForm = () => {
     const userData = {
       ...data,
     };
-    console.log(data);
+    // console.log(data);
     try {  
      const response = await axios.post(
       `http://localhost:5050/student?email=${data.email}&password=${data.password}`,

@@ -16,6 +16,7 @@ import {
 import SidebarItem from "@/components/sidebar/item";
 import Sidebaritem from "@/components/sidebar/item";
 import { useSession } from "next-auth/react";
+import { useMediaQuery } from "usehooks-ts";
 
 interface Sidebaritem {
   name: string;
@@ -29,21 +30,11 @@ interface SubItem {
   path: string;
 }
 
-const items: Sidebaritem[] = [
+const itemsTop: Sidebaritem[] = [
   {
     name: "Dashboard",
     path: "/dashboard",
     icon: LayoutDashboard,
-  },
-  {
-    name: "Profile",
-    path: "/profile",
-    icon: CircleUser,
-  },
-  {
-    name: "Finance info",
-    path: "/finance",
-    icon: Wallet,
   },
   {
     name: "Courses",
@@ -61,13 +52,26 @@ const items: Sidebaritem[] = [
     icon: CalendarCheck,
   },
   {
+    name: "Finance info",
+    path: "/finance",
+    icon: Wallet,
+  },
+];
+const itemsBottom: Sidebaritem[] =[
+  {
+    name: "Profile",
+    path: "/profile",
+    icon: CircleUser,
+  },
+  {
     name: "Log out",
     path: "/",
     icon: LogOutIcon,
   },
 ];
+
+
 const Sidebar = () => {
- 
   return (
    
        <div >
@@ -78,9 +82,14 @@ const Sidebar = () => {
           <span className={styles.userTitle}>John@gmail.com</span>
           </div> */}
       </div>
-      <div className="flex flex-col space-y-10 w-full ">
+      <div className="flex flex-col space-y-10 w-full justify-between h-[calc(100vh-150px)] z-5">
         <div  className="flex flex-col space-y-2 bg-green ">
-          {items.map((item) => (
+          {itemsTop.map((item) => (
+            <SidebarItem key={item.path} item={item} />
+          ))}
+        </div>
+        <div  className="flex flex-col space-y-2 bg-green ">
+          {itemsBottom.map((item) => (
             <SidebarItem key={item.path} item={item} />
           ))}
         </div>
@@ -89,6 +98,7 @@ const Sidebar = () => {
      
     
   );
+  return <div>Mobile</div>
 };
 
 export default Sidebar;
